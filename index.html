@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Girl Party World</title>
 <link rel="manifest" href="manifest.json">
+<style>
+body{margin:0;font-family:Arial;background:linear-gradient(135deg,#ff8ac6,#8a6cff);min-height:100vh;text-align:center;color:white}
+h1{margin:20px 0;text-shadow:0 2px 5px #000}
+.card{background:white;color:#333;border-radius:20px;padding:15px;margin:15px;box-shadow:0 5px 15px rgba(0,0,0,.3)}
+.btn{padding:12px 20px;border:none;border-radius:25px;background:linear-gradient(90deg,#ff5ea6,#7d5cff);color:white;font-weight:bold;margin:5px;font-size:16px}
+.avatar{font-size:80px;margin:10px}
+</style>
 </head>
 <body>
-<h1>Girl Party World</h1>
-<p>My game dey here!</p>
+<h1>💖 Girl Party World 💖</h1>
+
+<div class="card">
+<div class="avatar" id="girl">👗</div>
+<h3>Dress Up!</h3>
+<button class="btn" onclick="dress('👗')">Dress</button>
+<button class="btn" onclick="dress('👚')">Top</button>
+<button class="btn" onclick="dress('👠')">Heels</button>
+<button class="btn" onclick="dress('👑')">Crown</button>
+<button class="btn" onclick="dress('💃')">Party!</button>
+</div>
+
+<div class="card">
+<h3>🎉 Party Music</h3>
+<button class="btn" onclick="alert('🎵 Music On! Lets Dance! 💃')">Play Music</button>
+<button class="btn" onclick="alert('✨ You are the Party Queen! 👑💖')">Selfie 📸</button>
+</div>
+
+<div class="card">
+<p>Made with 💖 for Girls</p>
+</div>
+
+<script>
+function dress(e){document.getElementById('girl').innerText=e}
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{})}
+</script>
 </body>
 </html>
