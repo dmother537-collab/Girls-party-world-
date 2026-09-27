@@ -1,0 +1,11 @@
+{
+"name": "Girl Party World",
+"short_name": "Girl Party",
+"start_url": ".",
+"display": "standalone",
+"icons": [{
+"src": "https://cdn-icons-png.flaticon.com/512/6833/6833605.png",
+"sizes": "512x512",
+"type": "image/png"
+}]
+}
